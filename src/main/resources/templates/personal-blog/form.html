@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Blog</title>
+    <!-- Bootstrap 5 -->
+    <link th:href="@{/plugins/bootstrap-5/bootstrap.min.css}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+</head>
+
+<body class="bg-dark text-light">
+
+    <div class="container w-50">
+        <h1 class="text-center mt-3">Article Form</h1>
+
+        <!-- Article Name -->
+        <div class="form-group my-3">
+            <label>Article Name</label>
+            <input type="text" class="form-control my-2" id="name" autocapitalize="true" autocomplete="off" autofocus>
+        </div>
+
+        <!-- Article Content -->
+        <div class="form-group my-3">
+            <label>Article Content</label>
+            <textarea class="form-control my-2" id="content" rows="6"></textarea>
+        </div>
+
+        <!-- Article Tags -->
+        <div class="form-group my-3">
+            <label>Article Tags (Java, Spring Boot, API)</label>
+            <input class="form-control my-2" id="tag">
+        </div>
+
+        <!-- Publish Date -->
+        <div class="form-group my-3">
+            <label>Publish Date</label>
+            <input type="text" class="form-control my-2" id="public_date" autocapitalize="true" autocomplete="off">
+        </div>
+
+        <!-- Cancel Button and Submit Button -->
+        <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-outline-secondary px-3 mx-2">Cancel</button>
+            <button type="button" class="btn btn-outline-primary px-3 mx-2">Submit</button>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+    <!-- Jquery -->
+    <script th:src="@{/plugins/jquery/jquery.min.js}"></script>
+    <!-- Bootstrap 5 -->
+    <script th:src="@{/plugins/bootstrap-5/bootstrap.min.js}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+
+    <script>
+        flatpickr("#public_date", {
+            dateFormat: "d-m-Y", // Custom format: DD-MM-YYYY
+        });
+
+        $(document).ready(() => {
+            console.log("Welcome to Form Page");
+            /// bg-dark text-light
+            $(".form-control").addClass("bg-dark text-light");
+
+
+        });
+    </script>
+</body>
+
+</html>
