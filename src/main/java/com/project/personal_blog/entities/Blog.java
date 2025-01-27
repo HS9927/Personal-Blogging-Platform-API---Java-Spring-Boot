@@ -1,7 +1,8 @@
 package com.project.personal_blog.entities;
 
-import java.sql.Date;
 import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -30,17 +31,17 @@ public class Blog {
 	private String content;
 	
 	@Column(name = "publish_date", nullable = true)
-	private Date publishDate;
+	private LocalDate publishDate;
 	
 	@Column(nullable = true)
 	private Boolean status;
 	
 	@Column(name = "created_at")
-	private Timestamp createdAt;
+	private LocalDateTime createdAt;
 	
 	@Column(name = "updated_at", nullable = true)
-	private Timestamp updatedAt;
+	private LocalDateTime updatedAt;
 	
 	@Column(name = "deleted_at", nullable = true)
-	private Timestamp deletedAt;
+	private LocalDateTime deletedAt;
 }

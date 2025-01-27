@@ -1,6 +1,7 @@
 package com.project.personal_blog.entities;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -29,8 +30,8 @@ public class BlogTag {
 	int tagId;
 	
 	@Column(name = "created_at")
-	Timestamp createdAt;
+	LocalDateTime createdAt;
 	
 	@Column(name = "updated_at", nullable = true)
-	Timestamp updatedAt;
+	LocalDateTime updatedAt;
 }
