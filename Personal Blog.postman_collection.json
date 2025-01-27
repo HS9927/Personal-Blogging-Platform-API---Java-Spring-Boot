@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "40e71d4e-5b29-4a14-a7d2-da36497c12a0",
+		"name": "Personal Blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14858976"
+	},
+	"item": [
+		{
+			"name": "Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api-blog/test",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api-blog",
+						"test"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api-blog/list",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api-blog",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"First blog\", \r\n    \"content\" : \"First content\",  \r\n    \"publishDate\" : \"2025-03-03\",\r\n    \"tags\" : \"Backend Development, Frontend Development, Database\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api-blog/save",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api-blog",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Info",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api-blog/info/15",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api-blog",
+						"info",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 15,\r\n    \"name\": \"First blog 1\", \r\n    \"content\" : \"First content 1\",  \r\n    \"publishDate\" : \"2025-05-03\",\r\n    \"tags\" : \"Backend Development, Software Enginner\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/api-blog/update/15",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api-blog",
+						"update",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/api-blog/delete/15",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api-blog",
+						"delete",
+						"15"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
